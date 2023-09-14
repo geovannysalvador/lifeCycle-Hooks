@@ -1,7 +1,15 @@
 <p>product works!</p>
 
-<product-price-components></product-price-components>
+<product-price-components
+*ngIf="isProducVisible"
+[price]="changePrice"
+></product-price-components>
 
 <button (click)="isProducVisible = !isProducVisible">
   toggle
 </button>
+
+<button (click)="increasePrice()">
+  Plus
+</button>
+
